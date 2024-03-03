@@ -11,10 +11,7 @@ struct Home: View {
     
     @State var startActive = false
     var body: some View {
-        
         NavigationView {
-            
-            
             
             ZStack {
                 

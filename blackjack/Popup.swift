@@ -22,12 +22,14 @@ struct Popup: View {
             
             VStack {
                 Text(title)
-                    .font(.title2)
+                    .font(.system(size: 20, weight: .bold))
                     .bold()
                     .padding()
+                    .foregroundColor(.black)
                 
                 Text(message)
-                    .font(.body)
+                    .font(.system(size: 18, weight: .regular))
+                    .foregroundColor(.black)
                 
                 Button {
                     toggleActive = false
@@ -39,9 +41,10 @@ struct Popup: View {
                         RoundedRectangle(cornerRadius: 20)
                             .foregroundColor(.red)
                         Text(buttonTitle)
-                            .font(.system(size: 16, weight: .bold))
+                            .font(.system(size: 30, weight: .bold))
                             .foregroundColor(.white)
                             .padding()
+                            
                         
                     }
                     .padding()

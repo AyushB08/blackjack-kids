@@ -59,6 +59,7 @@ struct Instructions: View {
                         .resizable()
                         .frame(width: 100, height: 100*ratio)
                     Text("Ace: Worth 1 or 11 points (depending on which benefits)")
+                        .padding(.horizontal, 30)
                     Spacer()
                     
                     

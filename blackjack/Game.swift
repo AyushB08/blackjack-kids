@@ -89,7 +89,7 @@ struct Game: View {
                         .padding(.bottom, 20)
                         
                     HStack {
-                        let one = Int.random(in: 1...13)
+                        
                         Image(dealerCardShown + String(dealerFirstNum))
                             .resizable()
                             .frame(width: 110, height: 110 * ratio)
@@ -187,11 +187,15 @@ struct Game: View {
                 }
                 
             }
-            .navigationBarBackButtonHidden(true)
-            .navigationBarHidden(true)
-            .fullScreenCover(isPresented: $navigateToHomeBool, content: {
-                            Home() 
-                        })
+            
+            #if os(iOS)
+                .navigationBarBackButtonHidden(true)
+                .navigationBarHidden(true)
+                .fullScreenCover(isPresented: $navigateToHomeBool, content: {
+                                    Home()
+                                })
+            #endif
+            
             Spacer()
             
             EmptyView()
@@ -301,7 +305,7 @@ struct Game: View {
             
             playerScore += getValueFromCard("card" + String(rand))
             
-            let sum = getSum()
+          
             
             DispatchQueue.main.async {
                 
